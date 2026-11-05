@@ -1,0 +1,6 @@
+{
+  "name": "Daily Offering",
+  "description": "Daily prayer and devotional app featuring appointed Psalms for the morning, Proverbs for midday and evening, scheduled notifications at 8:00, 12:00, and 17:00, and customizable Excel reading schedule import.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

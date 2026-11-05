@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "IBM Plex Serif", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "IBM Plex Serif", Georgia, serif;
+
+  /* Sepia light mode palette */
+  --color-sepia-bg: #F3ECE1;
+  --color-sepia-surface: #F9F5EC;
+  --color-sepia-card: #FAF6EE;
+  --color-sepia-muted: #EBE2D3;
+  --color-sepia-border: #DCD0BE;
+  --color-sepia-text: #2D251F;
+  --color-sepia-subtext: #6B5E54;
+  --color-sepia-accent: #8B1527;
+
+  /* Soft dark gray mode palette */
+  --color-softgray-bg: #1E2024;
+  --color-softgray-surface: #26282E;
+  --color-softgray-card: #2B2E35;
+  --color-softgray-muted: #34373F;
+  --color-softgray-border: #3D414B;
+  --color-softgray-text: #E3E5EB;
+  --color-softgray-subtext: #9DA1AB;
+  --color-softgray-accent: #E57380;
+}
+
+:root {
+  background-color: #F3ECE1;
+  color: #2D251F;
+}
+
+html.dark {
+  background-color: #1E2024;
+  color: #E3E5EB;
+}
+
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  background-color: #F3ECE1;
+  color: #2D251F;
+  -webkit-font-smoothing: antialiased;
+}
+
+html.dark body {
+  background-color: #1E2024;
+  color: #E3E5EB;
+}
+
+/* Custom smooth scroll and reading styling */
+.prose-scripture {
+  font-family: var(--font-serif);
+  line-height: 1.85;
+}
+
+/* Custom scrollbar for sepia and soft dark gray */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(107, 94, 84, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 94, 84, 0.45);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(157, 161, 171, 0.25);
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(157, 161, 171, 0.45);
+}
+
